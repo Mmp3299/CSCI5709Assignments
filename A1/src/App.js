@@ -13,6 +13,10 @@ const SimpleCard = styled(Card)`
 const App = () => {
   const [showDetails, setShowDetails] = useState(false);
 
+  const handleCardClick = () => {
+    setShowDetails(true);
+  };
+
   return (
     <div>
       {showDetails ? (
@@ -37,7 +41,7 @@ const App = () => {
           </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
-              <CardActionArea onClick={() => setShowDetails(true)}>
+              <CardActionArea onClick={handleCardClick}>
                 <SimpleCard>
                   <CardContent>
                     <Typography variant="h5" align="center">
